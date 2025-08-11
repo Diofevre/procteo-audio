@@ -1,0 +1,24 @@
+# Environnement virtuel
+.venv/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.class
+
+# Rapports et sorties
+reports/
+
+# Secrets Streamlit
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+
+# Fichiers temporaires
+.tmp/
+
+# OS
+.DS_Store
+Thumbs.db

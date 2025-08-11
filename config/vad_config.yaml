@@ -1,0 +1,27 @@
+# Configuration VAD (Voice Activity Detection)
+# Paramètres pour pyannote/voice-activity-detection
+
+# Seuils de binarisation pyannote (plus souples pour détecter plus de segments)
+onset: 0.30          # Seuil pour détecter le début de parole
+offset: 0.25         # Seuil pour détecter la fin de parole
+min_duration_on: 0.20   # Durée minimale d'un segment de parole
+min_duration_off: 0.10  # Durée minimale de silence entre segments
+
+# Post-traitement des segments
+confidence_threshold: 0.3    # Seuil de confiance plus bas
+min_duration_s: 0.3         # Durée minimale finale
+merge_gap_s: 0.2            # Gap pour fusionner les segments proches
+margin_s: 0.25              # Marge autour de chaque segment
+
+# Modèle Pyannote à utiliser
+model: "pyannote/voice-activity-detection"
+
+# Paramètres d'extraction audio (pour vidéos)
+audio_extraction:
+  sample_rate: 16000
+  channels: 1  # mono
+  format: "wav"
+
+# Options de traitement
+device: "auto"  # auto, cpu, mps, cuda
+compute_confidence: false  # Pas de calcul de confiance pour l'instant
